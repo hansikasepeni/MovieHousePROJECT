@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MovieHouse</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>Movie<span>House</span></h1>
+        <p>Discover • Search • Explore</p>
+    </div>
+
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search movies, actors..."
+            autocomplete="off"
+            aria-label="Search Movies">
+    </div>
+
+</header>
+
+<section class="filters">
+
+    <select id="genre" aria-label="Genre">
+        <option value="">🎬 All Genres</option>
+    </select>
+
+    <select id="year" aria-label="Year">
+        <option value="">📅 All Years</option>
+    </select>
+
+    <select id="sort" aria-label="Sort Movies">
+
+        <option value="popularity.desc">
+            ⭐ Most Popular
+        </option>
+
+        <option value="vote_average.desc">
+            🏆 Highest Rated
+        </option>
+
+        <option value="release_date.desc">
+            🆕 Newest
+        </option>
+
+        <option value="release_date.asc">
+            📼 Oldest
+        </option>
+
+    </select>
+
+    <button id="clearBtn">
+        <i class="fa-solid fa-rotate-left"></i>
+        Clear
+    </button>
+
+</section>
+
+<section>
+
+    <h2>
+        🍿 Trending Movies
+    </h2>
+
+    <div id="movies" class="movies">
+
+    </div>
+
+</section>
+
+<div id="loader" class="loader">
+    🎬 Loading Movies...
+</div>
+
+<div id="movieModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">
+            &times;
+        </span>
+
+        <div id="modalBody">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
